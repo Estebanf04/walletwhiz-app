@@ -1,0 +1,44 @@
+{
+    "budget-form": {
+        "tittle": "Define Budget",
+        "placeholder": "Define your budget",
+        "text-button": "Define"
+    },
+    "budget-tracker": {
+        "budget": "Budget",
+        "spent": "Spent",
+        "remainingBudget": "Available",
+        "buttonRestart": "Restart",
+        "textProgressBar": "Spent"
+    },
+    "filterByCategory": {
+        "text": "Filter expenses",
+        "allCategories": "All categories"
+    },
+    "expenseList": {
+        "alert": "There are no expenses recorded.",
+        "tittle": "List of expenses."
+    },
+    "modalCreate": {
+        "tittle": "New expense",
+        "expenseName": "Expense Name:",
+        "placeholderName": "Add an expense name. e.g. Food, Clothing",
+        "quantity": "Amount:",
+        "category": "Category:",
+        "option": "Select",
+        "date": "Date of expense:",
+        "button": "Record Expense"
+    },
+    "modalEdit": {
+        "tittle": "Edit Expense",
+        "button": "Update Expense"
+    },
+    "swipeAction": {
+        "delete": "Delete",
+        "edit": "Update"
+    },
+    "error": {
+        "all-fields": "All fields are required",
+        "broke-limit-budge": "That expense exceeds your budget"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "budget-form": {
+        "tittle": "Definir Presupuesto",
+        "placeholder": "Define tu presupuesto",
+        "text-button": "Definir"
+    },
+    "budget-tracker": {
+        "budget": "Presupuesto",
+        "spent": "Gastado",
+        "remainingBudget": "Disponible",
+        "buttonRestart": "Reiniciar",
+        "textProgressBar": "Gastado"
+    },
+    "filterByCategory": {
+        "text": "Filtrar gastos",
+        "allCategories": "Todas las categorias"
+    },
+    "expenseList": {
+        "alert": "No hay gastos registrados.",
+        "tittle": "Listado de Gastos."
+    },
+    "modalCreate": {
+        "tittle": "Nuevo Gasto",
+        "expenseName": "Nombre del Gasto:",
+        "placeholderName": "Añade un nombre del gasto. Ej. Comida, Ropa",
+        "quantity": "Cantidad:",
+        "category": "Categoria:",
+        "option": "Seleccione",
+        "date": "Fecha del gasto:",
+        "button": "Registrar Gasto"
+    },
+    "modalEdit": {
+        "tittle": "Editar Gasto",
+        "button": "Actualizar Gasto"
+    },
+    "swipeAction": {
+        "delete": "Eliminar",
+        "edit": "Actualizar"
+    },
+    "error": {
+        "all-fields": "Todos los campos son obligatorios",
+        "broke-limit-budge": "Ese gasto sobrepasa tu presupuesto"
+    }
+}

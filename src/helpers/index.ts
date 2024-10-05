@@ -1,7 +1,7 @@
 import { useBudget } from "../hooks/useBudget"
 
-export function formatCurrency(amount: number){
-    return new Intl.NumberFormat('es-EU', {style: 'currency', currency: 'EUR'}).format(amount)
+export function formatCurrency(amount: number, divisa: string){
+    return new Intl.NumberFormat('es-ES', {style: 'currency', currency: divisa }).format(amount)
 }
 
 export function formatDate(dateStr: string) : string {

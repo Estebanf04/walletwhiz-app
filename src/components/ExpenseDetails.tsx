@@ -19,7 +19,7 @@ type ExpenseDetailsProps = {
 
 export default function ExpenseDetails({expense} : ExpenseDetailsProps) {
 
-    const { dispatch, t, i18n } = useBudget()
+    const { dispatch, t, i18n, divisa } = useBudget()
 
     const currentLanguage = i18n.language
     let categoryInfo : Category;
@@ -77,6 +77,7 @@ export default function ExpenseDetails({expense} : ExpenseDetailsProps) {
 
                     <AmountDisplay
                         amount={expense.amount}
+                        divisa={divisa}
                     />
                 </div>
 

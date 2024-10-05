@@ -5,7 +5,7 @@ import "react-circular-progressbar/dist/styles.css"
 
 export default function BudgetTracker() {
 
-const {state, dispatch, totalExpenses, remainingBudget, t} = useBudget()
+const {state, dispatch, totalExpenses, remainingBudget, t, divisa} = useBudget()
 const percentage = +((totalExpenses / state.budget) * 100).toFixed(1)
 
   return (
@@ -28,16 +28,19 @@ const percentage = +((totalExpenses / state.budget) * 100).toFixed(1)
             <AmountDisplay
                 label={t("budget-tracker.budget")}
                 amount={state.budget}
+                divisa={divisa}
             />
 
             <AmountDisplay
                 label={t("budget-tracker.spent")}
                 amount={totalExpenses}
+                divisa={divisa}
             />
 
             <AmountDisplay
                 label={t("budget-tracker.remainingBudget")}
                 amount={remainingBudget}
+                divisa={divisa}
             />
             </div>
 

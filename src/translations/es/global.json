@@ -1,8 +1,9 @@
 {
     "budget-form": {
-        "tittle": "Definir Presupuesto",
+        "tittle": "Definir Presupuesto y Divisa",
         "placeholder": "Define tu presupuesto",
-        "text-button": "Definir"
+        "text-button": "Definir",
+        "plcselect": "Elegir divisa"
     },
     "budget-tracker": {
         "budget": "Presupuesto",

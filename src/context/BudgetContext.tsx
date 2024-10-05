@@ -9,7 +9,8 @@ type BudgetContextProps = {
     totalExpenses: number,
     remainingBudget: number,
     t: TFunction<"global", undefined>,
-    i18n: i18n
+    i18n: i18n,
+    divisa: string
 
 }
 
@@ -25,6 +26,7 @@ export const BudgetProvider = ({children} : BudgetProviderProps) => {
     const totalExpenses = useMemo(()=> state.expenses.reduce((total, expense) => expense.amount + total, 0),[state.expenses])
     const remainingBudget = state.budget - totalExpenses
     const [t, i18n] = useTranslation("global")
+    const divisa = state.divisa
 
     return (
         <BudgetContext.Provider
@@ -34,7 +36,8 @@ export const BudgetProvider = ({children} : BudgetProviderProps) => {
                 totalExpenses,
                 remainingBudget,
                 t,
-                i18n
+                i18n,
+                divisa
             }}
         >
             {children}

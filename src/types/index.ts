@@ -17,3 +17,9 @@ export type Category = {
     name: string,
     icon: string
 }
+
+export type Divisa = {
+    id: number,
+    name: string,
+    currency: string
+}

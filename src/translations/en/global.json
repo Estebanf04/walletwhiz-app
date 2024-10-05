@@ -1,8 +1,9 @@
 {
     "budget-form": {
-        "tittle": "Define Budget",
+        "tittle": "Define Budget and Currency",
         "placeholder": "Define your budget",
-        "text-button": "Define"
+        "text-button": "Define",
+        "plcselect": "Choose currency"
     },
     "budget-tracker": {
         "budget": "Budget",

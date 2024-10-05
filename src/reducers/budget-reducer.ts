@@ -2,7 +2,7 @@ import { Category, DraftExpense, Expense } from "../types"
 import {v4 as uuidv4} from 'uuid'
 
 export type BudgetActions = 
-{ type: 'add-budget', payload: {budget: number} } |
+{ type: 'add-budget', payload: {budget: number, divisa: string } } |
 { type: 'show-modal'} |
 { type: 'close-modal'} |
 { type: 'add-expense', payload: {expense: DraftExpense}} |
@@ -17,8 +17,8 @@ export type BudgetState = {
     modal: boolean,
     expenses: Expense[],
     editingId: Expense['id'],
-    currentCategory: Category['id']
-
+    currentCategory: Category['id'],
+    divisa: string
 }
 
 const initialBudget = () : number => {
@@ -31,12 +31,18 @@ const initialExpenses = () : Expense[] => {
     return localStorageExpense ? JSON.parse(localStorageExpense) : []
 }
 
+const initialDivisa = () : string => {
+    const localStorageDivisa = localStorage.getItem('divisa')
+    return localStorageDivisa ? localStorageDivisa : ''
+}
+
 export const InitialState : BudgetState = {
     budget: initialBudget(),
     modal: false,
     expenses: initialExpenses(),
     editingId: '',
-    currentCategory: ''
+    currentCategory: '',
+    divisa: initialDivisa()
 }
 
 const createExpense = (draftExpense : DraftExpense) : Expense => {
@@ -54,7 +60,8 @@ export const budgetReducer = (
     if(action.type === 'add-budget'){
         return {
             ...state,
-            budget: action.payload.budget
+            budget: action.payload.budget,
+            divisa: action.payload.divisa
         }
     }
 
@@ -114,6 +121,7 @@ export const budgetReducer = (
         return {
             ...state,
             budget: 0,
+            divisa: '',
             expenses: []
         }
     }

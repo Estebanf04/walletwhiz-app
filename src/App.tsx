@@ -9,23 +9,25 @@ import Header from "./components/Header"
 
 function App() {
 
-  const { state, i18n } = useBudget()
-  
+  const { state, i18n, divisa } = useBudget()
   const isValidBudget = useMemo(() => state.budget > 0, [state.budget])
 
   useEffect(() => {
     localStorage.setItem('budget', state.budget.toString())
     localStorage.setItem('expenses', JSON.stringify(state.expenses))
   }, [state])
-
+  
   useEffect(() => {
     localStorage.setItem('defaultlanguage', i18n.language)
   }, [i18n.language])
 
+  useEffect(() => {
+    localStorage.setItem('divisa', divisa)
+  }, [divisa])
+
 
   return (
     <>
-      
         <Header/>
 
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
@@ -41,9 +43,6 @@ function App() {
               </main>
           ) 
         }   
-
-    
-    
     </>
   )
 }

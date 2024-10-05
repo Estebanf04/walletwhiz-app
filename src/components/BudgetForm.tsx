@@ -1,26 +1,32 @@
 import { useMemo, useState } from "react"
 import { ChangeEvent, FormEvent } from "react"
 import { useBudget } from "../hooks/useBudget"
+import { divisas } from "../data/divisas"
 
 
 export default function BudgetForm() {
 
 
     const [budget, setBudget] = useState(0)
+    const [divisa, setDivisa] = useState('')
     const { dispatch, t } = useBudget()
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement> ) => {
-        setBudget(e.target.valueAsNumber)
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setBudget(+e.target.value)
     }
 
+    const handleCurrency = (e: ChangeEvent<HTMLSelectElement> ) => {
+        setDivisa(e.target.value)
+    } 
+
     const isValid = useMemo(() => {
-        return isNaN(budget) || budget <= 0
-    }, [budget])
+        return isNaN(budget) || budget <= 0 || divisa === ""
+    }, [budget, divisa])
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         
-        dispatch({type: 'add-budget', payload: {budget: budget}})
+        dispatch({type: 'add-budget', payload: {budget: budget, divisa: divisa}})
     }
 
     
@@ -40,6 +46,21 @@ export default function BudgetForm() {
             value={budget}
             onChange={handleChange}
             />
+
+            <select 
+            className="w-full bg-white border border-gray-200 p-2"
+            value={divisa}
+            onChange={handleCurrency}
+            >
+                <option value="">-- {t("budget-form.plcselect")} --</option>
+                {divisas.map((divisa)=> (
+                    <option 
+                    key={divisa.id}
+                    value={divisa.currency}>
+                        {divisa.name}
+                    </option>
+                ))}
+            </select>
          </div>
 
          <input 

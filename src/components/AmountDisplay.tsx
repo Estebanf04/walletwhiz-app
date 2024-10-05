@@ -2,15 +2,16 @@ import { formatCurrency } from "../helpers"
 
 type AmountDisplayProps = {
     label?: string,
-    amount: number
+    amount: number,
+    divisa: string
 }
 
+export default function AmountDisplay({label, amount, divisa} : AmountDisplayProps) {
 
-export default function AmountDisplay({label, amount} : AmountDisplayProps) {
   return (
     <p className="text-xl sm:text-2xl text-blue-600 font-semibold flex justify-between gap-8">
         {label && `${label}`}
-        <span className="font-semibold text-black">{formatCurrency(amount)}</span>
+        <span className="font-semibold text-black">{formatCurrency(amount, divisa)}</span>
     </p>
   )
 }

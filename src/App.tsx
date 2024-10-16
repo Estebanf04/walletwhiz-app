@@ -30,19 +30,26 @@ function App() {
     <>
         <Header/>
 
-        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
-            { isValidBudget ? <BudgetTracker/> : <BudgetForm/> }
-        </div>
+            { isValidBudget 
+            ? 
+            <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
+              <BudgetTracker/> 
+            </div>
+            : 
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
+              <BudgetForm/> 
+            </div>
+            }
 
-        { 
-          isValidBudget && (
-              <main className="max-w-4xl mx-auto py-10 sm:min-h-64">
-                <FilterByCategory/>
-                <ExpenseList/>
-                <ExpenseModal/>
-              </main>
-          ) 
-        }   
+            { 
+              isValidBudget && (
+                  <main className="max-w-4xl mx-auto py-10 sm:min-h-64">
+                    <FilterByCategory/>
+                    <ExpenseList/>
+                    <ExpenseModal/>
+                  </main>
+              ) 
+            }   
     </>
   )
 }

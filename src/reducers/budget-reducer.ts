@@ -3,14 +3,14 @@ import {v4 as uuidv4} from 'uuid'
 
 export type BudgetActions = 
 { type: 'add-budget', payload: {budget: number, divisa: string } } |
-{ type: 'show-modal'} |
-{ type: 'close-modal'} |
-{ type: 'add-expense', payload: {expense: DraftExpense}} |
+{ type: 'show-modal' } |
+{ type: 'close-modal' } |
+{ type: 'add-expense', payload: {expense: DraftExpense} } |
 { type: 'delete-expense', payload: {id: Expense['id']} } |
-{type: 'get-expense-by-id', payload: {id: Expense['id']}} |
-{type: 'update-expense', payload: {expense: Expense}} |
-{type: 'restart-app'} |
-{type: 'add-filter-category', payload: {id: Category['id']}}
+{ type: 'get-expense-by-id', payload: {id: Expense['id']} } |
+{ type: 'update-expense', payload: {expense: Expense} } |
+{ type: 'restart-app' } |
+{ type: 'add-filter-category', payload: {id: Category['id']} }
 
 export type BudgetState = {
     budget: number,

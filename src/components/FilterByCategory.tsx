@@ -12,7 +12,6 @@ const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
 
 const currentLanguage = i18n.language
 
-
   return (
     <div className="bg-white shadow-lg rounded-lg p-8">
         <form>

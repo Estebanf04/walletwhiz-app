@@ -33,7 +33,7 @@ export default function BudgetForm() {
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-5">
-            <label htmlFor="budget" className="text-2xl sm:text-3xl text-blue-950 font-semibold text-center ">
+            <label htmlFor="budget" className="text-xl sm:text-2xl text-blue-950 font-semibold text-center">
                 {t("budget-form.tittle")}
             </label>
         
@@ -63,12 +63,14 @@ export default function BudgetForm() {
             </select>
          </div>
 
-         <input 
-         type="submit" 
-         value={t("budget-form.text-button")}
-         className="bg-blue-950 hover:bg-blue-900 cursor-pointer w-full p-2 text-white font-bold uppercase disabled:opacity-10 disabled:cursor-auto" 
-         disabled={isValid}
-         />
+        <div className="flex justify-center">
+            <input 
+            type="submit" 
+            value={t("budget-form.text-button")}
+            className="bg-blue-950 hover:bg-blue-900 cursor-pointer w-full sm:w-2/3 p-2 text-white font-bold uppercase disabled:opacity-10 disabled:cursor-auto" 
+            disabled={isValid}
+            />
+         </div>
 
 
     </form>

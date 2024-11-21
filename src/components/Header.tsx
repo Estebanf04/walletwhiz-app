@@ -5,7 +5,7 @@ export default function Header() {
 const {i18n} = useBudget()
 
   return (
-    <header className="bg-[#021526] py-6 px-6 sm:px-8 max-h-72 flex justify-between items-center">
+    <header className="bg-[#021526] py-6 pl-2 pr-6 sm:pr-8 max-h-72 flex justify-between items-center">
         <img 
         src="/walletwhizlogo.jpg" alt="logo"
         className="w-[180px] sm:w-[200px] cursor-pointer"

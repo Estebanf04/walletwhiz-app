@@ -45,9 +45,11 @@ function App() {
               </main>
             </>
             : 
-            <div className="max-w-2xl mx-auto bg-[#021526] shadow-md rounded-md mt-10 p-10 shadow-[#6EACDA]">
-              <BudgetForm/> 
-            </div>
+            <main className="grid max-w-2xl mx-auto px-5">
+                <div className="max-w-1/2 w-full mx-auto bg-[#021526] shadow-md rounded-md mt-10 p-10 shadow-[#6EACDA]">
+                  <BudgetForm/> 
+                </div>
+            </main>
             }
     </>
   )

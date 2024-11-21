@@ -58,9 +58,10 @@ export default function ExpenseDetails({expense} : ExpenseDetailsProps) {
                 maxSwipe={1}
                 leadingActions={leadingActions()}
                 trailingActions={trailingActions()}
+                className="my-2"
             >
 
-                <div className="bg-white p-5 w-full border-b border-gray-200 flex gap-5 items-center">
+                <div className="bg-transparent p-5 w-full border border-gray-700 rounded flex gap-5 items-center">
                     <div className="">
                         <img 
                         src={`/icono_${categoryInfo.icon}.svg`}
@@ -70,9 +71,9 @@ export default function ExpenseDetails({expense} : ExpenseDetailsProps) {
                     </div>
 
                     <div className="flex-1 space-y-2">
-                        <p className="text-sm font-bold uppercase text-slate-500">{categoryInfo.name}</p>
-                        <p>{expense.expenseName}</p>
-                        <p className="text-slate-600 sm:text-sm">{formatDate(expense.date!.toString())}</p>
+                        <p className="text-sm font-bold uppercase text-slate-400">{categoryInfo.name}</p>
+                        <p className="text-[#E2E2B6]">{expense.expenseName}</p>
+                        <p className="text-slate-500 sm:text-sm">{formatDate(expense.date!.toString())}</p>
                     </div>
 
                     <AmountDisplay

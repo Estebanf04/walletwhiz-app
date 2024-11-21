@@ -11,12 +11,12 @@ export default function ExpenseModal() {
 
   return (
     <>
-      <div className="fixed right-5 bottom-5 flex items-center justify-center">
+      <div className="fixed left-7 bottom-5 flex items-center justify-center">
         <button
           type="button"
           onClick={() => dispatch({type: 'show-modal'})}
         >
-          <PlusCircleIcon className='w-20 h-20 text-green-400 hover:text-green-500 rounded-full' />
+          <PlusCircleIcon className='w-20 h-20 text-green-500 hover:text-green-600 rounded-full' />
         </button>
       </div>
 
@@ -45,7 +45,7 @@ export default function ExpenseModal() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-[#021526] p-6 text-left align-middle shadow-xl transition-all">
                         <ExpenseForm/>
                     </Dialog.Panel>
                 </Transition.Child>

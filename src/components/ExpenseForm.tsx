@@ -80,7 +80,7 @@ export default function ExpenseForm() {
     return (
         <form className="space-y-5" onSubmit={handleSubmit}>
             <legend 
-            className="uppercase mx-auto text-center text-2xl font-bold border-b-4 border-blue-800 py-2">
+            className="text-[#E2E2B6] mx-auto text-center text-3xl font-black border-b-4 border-[#5caae5] py-2">
                 {state.editingId ? t("modalEdit.tittle") : t("modalCreate.tittle")}
             </legend>
 
@@ -89,14 +89,14 @@ export default function ExpenseForm() {
             <div className="flex flex-col gap-2">
                 <label 
                 htmlFor="expenseName"
-                className="text-xl"
+                className="text-xl text-[#E2E2B6]"
                 >
                     {t("modalCreate.expenseName")}
                 </label>
 
                 <input 
                 type="text"
-                className="bg-slate-100 p-2" 
+                className="text-gray-400 bg-transparent border border-gray-700 p-2" 
                 id="expenseName" 
                 placeholder={t("modalCreate.placeholderName")}
                 name="expenseName"
@@ -108,14 +108,14 @@ export default function ExpenseForm() {
             <div className="flex flex-col gap-2">
                 <label 
                 htmlFor="amount"
-                className="text-xl"
+                className="text-xl text-[#E2E2B6]"
                 >
                     {t("modalCreate.quantity")}
                 </label>
 
                 <input 
                 type="number"
-                className="bg-slate-100 p-2" 
+                className="bg-transparent border border-gray-700 p-2 text-gray-400" 
                 id="amount" 
                 placeholder="Añade la cantidad del gasto. Ej. 250"
                 name="amount"
@@ -127,13 +127,13 @@ export default function ExpenseForm() {
             <div className="flex flex-col gap-2">
                 <label 
                 htmlFor="category"
-                className="text-xl"
+                className="text-xl text-[#E2E2B6]"
                 >
                     {t("modalCreate.category")}
                 </label>
 
                 <select 
-                className="bg-slate-100 p-2" 
+                className="bg-transparent border border-gray-700 p-2 text-gray-400" 
                 id="category" 
                 name="category"
                 value={expense.category}
@@ -147,6 +147,7 @@ export default function ExpenseForm() {
                                 <option 
                                 value={category.id}
                                 key={category.id}
+                                className="text-gray-800"
                                 >
                                     {category.name}
                                 </option>
@@ -167,13 +168,13 @@ export default function ExpenseForm() {
             <div className="flex flex-col gap-2">
                 <label 
                 htmlFor="date"
-                className="text-xl"
+                className="text-xl text-[#E2E2B6]"
                 >
                     {t("modalCreate.date")}
                 </label>
 
                 <DatePicker
-                className="bg-slate-100 p-2 border-0 border-none"
+                className="bg-transparent border border-gray-700 p-2 mb-3 text-gray-400"
                 value={expense.date}
                 onChange={handleChangeDate}
                 />
@@ -182,7 +183,7 @@ export default function ExpenseForm() {
             <input 
             type="submit" 
             value={state.editingId ? t("modalEdit.button") : t("modalCreate.button")}
-            className="bg-blue-950 cursor-pointer w-full p-2 text-white uppercase font-bold rounded-lg hover:bg-blue-900" 
+            className="bg-[#5caae5] hover:bg-[#447ea9] cursor-pointer w-full p-2 text-white uppercase font-bold rounded-md" 
             />
         </form>
     )

@@ -32,24 +32,23 @@ function App() {
 
             { isValidBudget 
             ? 
-            <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
-              <BudgetTracker/> 
-            </div>
+            <>
+              <main className="grid grid-cols-1 md:grid-cols-2 px-4 sm:px-10 gap-4">
+                <div className="max-w-1/2 w-full max-h-max mx-auto bg-[#021526] shadow-md rounded-lg mt-10 p-10 shadow-[#6EACDA]">
+                  <BudgetTracker/> 
+                </div>
+                <div className="max-w-1/2 w-full max-h-max mx-auto my-10 md:min-h-64">
+                  <FilterByCategory/>
+                  <ExpenseList/>
+                  <ExpenseModal/>
+                </div>
+              </main>
+            </>
             : 
-            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
+            <div className="max-w-2xl mx-auto bg-[#021526] shadow-md rounded-md mt-10 p-10 shadow-[#6EACDA]">
               <BudgetForm/> 
             </div>
             }
-
-            { 
-              isValidBudget && (
-                  <main className="max-w-4xl mx-auto py-10 sm:min-h-64">
-                    <FilterByCategory/>
-                    <ExpenseList/>
-                    <ExpenseModal/>
-                  </main>
-              ) 
-            }   
     </>
   )
 }

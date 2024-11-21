@@ -16,8 +16,8 @@ const percentage = +((totalExpenses / state.budget) * 100).toFixed(1)
                 styles={buildStyles({
                     pathColor: percentage === 100 ? '#DC2626' : '#3B82F6',
                     trailColor: '#F5F5F5',
-                    textSize: 8,
-                    textColor: percentage === 100 ? '#DC2626' : '#3B82F6'
+                    textSize: 7,
+                    textColor: percentage === 100 ? '#DC2626' : '#5caae5'
                 })}
                 text={`${percentage}% ${t("budget-tracker.textProgressBar")}`}
             />
@@ -46,7 +46,7 @@ const percentage = +((totalExpenses / state.budget) * 100).toFixed(1)
 
             <button
             type="button"
-            className="bg-blue-950 hover:bg-blue-900 w-full p-2 text-white uppercase font-bold rounded-md"
+            className="bg-[#5caae5] hover:bg-[#447ea9] w-full p-2 text-white uppercase font-bold rounded transition-colors"
             onClick={() => dispatch({type: 'restart-app'})}
             >
                 {t("budget-tracker.buttonRestart")}

@@ -33,7 +33,7 @@ export default function BudgetForm() {
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-5">
-            <label htmlFor="budget" className="text-xl sm:text-3xl text-gray-300 font-black text-center">
+            <label htmlFor="budget" className="text-lg sm:text-3xl text-gray-300 font-black text-center">
                 {t("budget-form.tittle")}
             </label>
         

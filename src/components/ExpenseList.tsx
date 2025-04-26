@@ -14,10 +14,10 @@ export default function ExpenseList() {
   const isEmpty = useMemo(() => filteredExpenses.length === 0, [filteredExpenses])
 
   return (
-    <div className="my-4 bg-[#021526] rounded-lg px-8 py-5 max-h-screen overflow-y-scroll">
-        {isEmpty ? <p className="text-[#E2E2B6] text-lg font-semibold text-center">{t("expenseList.alert")}</p> : (
+    <div id="expenselist" className={`my-4 bg-[#141414] border border-[#201e1e] rounded-lg px-8 py-5 md:max-h-[55vh] 2xl:max-h-[65vh] ${!isEmpty && 'overflow-y-scroll'}`}>
+        {isEmpty ? <p className="text-[#F5F5F5] text-lg font-semibold text-center">{t("expenseList.alert")}</p> : (
             <>
-                <p className="text-[#E2E2B6] text-xl font-semibold my-3 text-center md:text-start">{t("expenseList.tittle")}</p>
+                <p className="text-[#F5F5F5] text-xl font-semibold my-3 text-center md:text-start">{t("expenseList.tittle")}</p>
                 {filteredExpenses.map((expense) => (
                     <ExpenseDetails
                         key={expense.id}

@@ -33,20 +33,20 @@ function App() {
             { isValidBudget 
             ? 
             <>
-              <main className="grid grid-cols-1 md:grid-cols-2 px-4 sm:px-10 gap-4">
-                <div className="max-w-1/2 w-full max-h-max mx-auto bg-[#021526] shadow-md rounded-lg mt-10 p-10 shadow-[#6EACDA]">
-                  <BudgetTracker/> 
-                </div>
+              <main className="grid grid-cols-1 md:grid-cols-2 px-4 sm:px-10 gap-4 ">
+                <BudgetTracker/> 
+
                 <div className="max-w-1/2 w-full max-h-max mx-auto my-10 md:min-h-64">
                   <FilterByCategory/>
                   <ExpenseList/>
                   <ExpenseModal/>
                 </div>
+                
               </main>
             </>
             : 
-            <main className="grid max-w-2xl mx-auto px-5">
-                <div className="max-w-1/2 w-full mx-auto bg-[#021526] shadow-md rounded-md mt-10 p-10 shadow-[#6EACDA]">
+            <main className="grid max-w-2xl mx-auto px-5 ">
+                <div className="max-w-xl w-full mx-auto rounded-md mt-10 p-10">
                   <BudgetForm/> 
                 </div>
             </main>

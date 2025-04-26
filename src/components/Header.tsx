@@ -5,12 +5,9 @@ export default function Header() {
 const {i18n} = useBudget()
 
   return (
-    <header className="bg-[#021526] py-6 pl-2 pr-6 sm:pr-8 max-h-72 flex justify-between items-center">
-        <img 
-        src="/walletwhizlogo.jpg" alt="logo"
-        className="w-[180px] sm:w-[200px] cursor-pointer"
-        onClick={() => location.href = "/"}
-        />
+    <header className="bg-[#141414] py-6 px-6 sm:px-8 max-h-72 flex justify-between items-center border-b border-[#202020]">
+        <a className="text-2xl text-white" href="/">Wallet <span className="text-cyan-400 font-medium">Whiz</span></a>
+
         <div className="text-white">
             {i18n.language === 'en' 
               ?

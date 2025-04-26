@@ -61,7 +61,7 @@ export default function ExpenseDetails({expense} : ExpenseDetailsProps) {
                 className="my-2"
             >
 
-                <div className="bg-transparent p-5 w-full border border-gray-700 rounded flex gap-5 items-center">
+                <div className="bg-[#101010] cursor-pointer p-5 w-full border border-gray-800 rounded-md flex gap-5 items-center">
                     <div className="">
                         <img 
                         src={`/icono_${categoryInfo.icon}.svg`}

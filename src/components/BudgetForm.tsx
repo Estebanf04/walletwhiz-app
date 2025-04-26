@@ -33,14 +33,11 @@ export default function BudgetForm() {
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-5">
-            <label htmlFor="budget" className="text-lg sm:text-3xl text-gray-300 font-black text-center">
-                {t("budget-form.tittle")}
-            </label>
-        
+
             <input 
             id="budget"
             type="number"
-            className="w-full bg-transparent border border-gray-700 p-2 rounded-md text-gray-400"
+            className="w-full bg-[#141414] border border-gray-700 shadow-md shadow-cyan-900 hover:shadow-lg hover:shadow-cyan-800 hover:border-cyan-800 transition-all duration-500 cursor-pointer p-2 rounded-md text-gray-400 focus:outline-none"
             placeholder={t("budget-form.placeholder")}
             name="budget"
             value={budget}
@@ -48,27 +45,29 @@ export default function BudgetForm() {
             />
 
             <select 
-            className="w-full bg-transparent border border-gray-700 p-2 rounded-md text-gray-400"
+            className="w-full bg-[#141414] border border-gray-700 shadow-md shadow-cyan-900 hover:shadow-lg hover:shadow-cyan-800 hover:border-cyan-800 transition-all duration-500 cursor-pointer p-2 rounded-md text-gray-400 focus:outline-none"
             value={divisa}
             onChange={handleCurrency}
             >
-                <option value="">-- {t("budget-form.plcselect")} --</option>
+                <option value="" className="text-gray-400">
+                {t("budget-form.plcselect")}
+                </option>
                 {divisas.map((divisa)=> (
                     <option 
                     key={divisa.id}
                     value={divisa.currency}
-                    className="text-gray-800">
+                    className="text-gray-400">
                         {divisa.name}
                     </option>
                 ))}
             </select>
          </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-end">
             <input 
             type="submit" 
             value={t("budget-form.text-button")}
-            className="bg-[#5caae5] hover:bg-[#447ea9] transition-colors cursor-pointer w-full p-2 mt-3 text-white font-bold uppercase disabled:opacity-10 disabled:cursor-auto rounded-sm" 
+            className="bg-gradient-to-r from-cyan-400 to-cyan-600 transition-colors cursor-pointer w-full p-2 mt-3 text-gray-900 font-bold uppercase disabled:opacity-60 disabled:cursor-auto rounded-md" 
             disabled={isValid}
             />
          </div>
